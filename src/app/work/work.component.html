@@ -1,0 +1,145 @@
+<!-- <p>work works!</p>
+<button type="button" class="btn btn-primary" (click)="openModal(createWorkTypeModal)">Create Work Type</button>
+
+<button type="button" class="btn btn-primary" (click)="openItemTypeModal(createItemTypeModal)">Create Item Type</button> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/admindashboard']">Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/user']">User Management </button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/work']">Work Management</button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/userwork']">User Work Item Assignment</button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/messages']">Message Inbox</button>
+      </li>
+    </ul>
+
+     
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()"><h6>Logout</h6></button>
+
+  </div>
+</nav>
+
+<div class="content" role="main">
+<div class="card-container">
+    <a class="card"  rel="noopener" (click)="openModal(createWorkTypeModal)">
+     
+      <span>Create Work Type</span>
+
+
+    </a>
+
+    <a class="card"  rel="noopener" (click)="openItemTypeModal(createItemTypeModal)">
+      
+
+      <span>Create Item Type</span>
+
+     
+    </a>
+</div>
+
+</div>
+
+<ng-template #createWorkTypeModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="editProfileLabel">Create Work Type</h5>
+        <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+       
+       <div class="modal-body">
+        <form [formGroup]="worktypeForm" (ngSubmit)="onSubmit(worktypeForm.value)">
+   
+         <div class="form-group row">
+          <label for="workTypeCode" class="col-sm-4 col-form-label">Work Type Code</label>
+          <div class="col-sm-8">
+           <input type="text" class="form-control" formControlName="workTypeCode" id="workTypeCode" [ngClass]="{ 'is-invalid': submitted && f.workTypeCode.errors }" >
+           <div *ngIf="submitted && f.workTypeCode.errors" class="invalid-feedback">
+               <div *ngIf="f.workTypeCode.errors.required">Work Type Code is required</div>
+                <div *ngIf="f.workTypeCode.errors.pattern">Work Type Code Can Only Have Numbers and Upper Cases Alphabets</div>
+                <div *ngIf="f.workTypeCode.errors.maxlength">Work Type Code Can Have Maximum of 6 Characters</div>
+                <div *ngIf="f.workTypeCode.errors.ExistingWorkTypeValidator">Work Type Code already exists</div>
+           </div>
+           </div>
+   
+         </div>
+         <div class="form-group row">
+          <label for="description" class="col-sm-4 col-form-label">Description</label>
+          <div class="col-sm-8">
+           <input type="text" class="form-control" formControlName="description" id="description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+           <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+               <div *ngIf="f.description.errors.required">Description is required</div>
+           </div>
+          </div>
+        </div>
+          
+         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+          <button type="submit" class="btn btn-primary">Create</button>
+         </div>
+        </form>
+       </div>
+</ng-template>
+
+<ng-template #createItemTypeModal let-modal>
+    <div class="modal-header">
+        <h5 class="modal-title" id="editProfileLabel">Create Item Type</h5>
+        <button type="button" class="close" (click)="modal.dismiss()" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+       
+       <div class="modal-body">
+        <form [formGroup]="itemtypeForm" (ngSubmit)="onSubmitItemType(itemtypeForm.value)">
+   
+         <div class="form-group row">
+          <label for="itemCode" class="col-sm-4 col-form-label">Item Code</label>
+          <div class="col-sm-8">
+           <input type="text" class="form-control" formControlName="itemCode" id="itemCode" [ngClass]="{ 'is-invalid': submitteditem && g.itemCode.errors }" >
+           <div *ngIf="submitteditem && g.itemCode.errors" class="invalid-feedback">
+            <div *ngIf="g.itemCode.errors.required">Item Code is required</div>
+            <div *ngIf="g.itemCode.errors.pattern">Item Code Can Only Have Numbers and Upper Cases Alphabets</div>
+            <div *ngIf="g.itemCode.errors.maxlength">Item Code Can Have Maximum of 6 Characters</div>
+            <div *ngIf="g.itemCode.errors.ExistingItemTypeValidator">Item Code already exists</div>
+           </div>
+           </div>
+   
+         </div>
+         <div class="form-group row">
+          <label for="description" class="col-sm-4 col-form-label">Description</label>
+          <div class="col-sm-8">
+           <input type="text" class="form-control" formControlName="description" id="description" [ngClass]="{ 'is-invalid': submitteditem && g.description.errors }">
+           <div *ngIf="submitteditem && g.description.errors" class="invalid-feedback">
+               <div *ngIf="g.description.errors.required">Description is required</div>
+           </div>
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="worktypeCode" class="col-sm-4 col-form-label">Work Type</label>
+            <div class="col-sm-8">
+                <select class="form-control" formControlName="worktypeCode" id="worktypeCode">
+                    
+                    <option *ngFor="let work of workTypeCode" [ngValue]="work">{{work}}</option>
+                </select>
+            </div>
+        </div>
+          
+         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Close</button>
+          <button type="submit" class="btn btn-primary">Create</button>
+         </div>
+        </form>
+       </div>
+</ng-template>

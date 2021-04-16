@@ -1,0 +1,143 @@
+
+
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class=" main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span class="fa fa-clock-o fa-lg"></span></h2></span>
+				<h4 class="company_title">Plan View</h4>
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					
+						<h2 style="text-align: center;">REGISTER</h2>
+					
+
+						<form [formGroup]="registerForm" control="" class="form-group" (ngSubmit)="OnRegister(registerForm.value)">
+                            <div class="section1">
+                            <!-- First Name -->
+                            <div class="row">
+								<input type="text" formControlName="firstName" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name"/>
+                                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                    <div *ngIf="f.firstName.errors.pattern">First Name can only have alphabets</div>
+                                </div>
+							</div>
+                            <!-- Last Name -->
+                            <div class="row">
+								<input type="text" formControlName="lastName" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" placeholder="Last Name"/>
+                                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                    <div *ngIf="f.lastName.errors.pattern">Last Name can only have alphabets</div>
+                                </div>
+							</div>
+
+                            <!-- Email -->
+							<div class="row" >
+								<input type="email"  formControlName="email" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Email Id is required</div>
+                                    <div *ngIf="f.email.errors?.pattern">Please provide a valid email domain</div>
+                                </div>
+							</div>
+
+                            <!-- Date Of Birth -->
+                            <div class="row" >
+								<input readonly formControlName="dob" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" class="form__input" [maxDate]="{'year': year, 'month': month, 'day': day}" placeholder="D.O.B YYYY-MM-DD" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button  class="btn btn-outline-secondary calendar" style="position: absolute;margin:  21px 0px 0px -65px; width: 62px;" (click)="d.toggle()" type="button">📅</button>
+                                </div>
+                                <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                                    <div *ngIf="f.dob.errors.required">Date Of Birth is required</div>
+                                    <div *ngIf="f.dob.errors.ngbDate.invalid">Date Of Birth must be YYYY-MM-DD</div>
+                                    
+                                </div>
+							</div>
+
+                            
+                           <!-- Address Line 1 -->
+                            <div class="row">
+								<input type="text"  formControlName="addressLine1" class="form__input"  placeholder="Address Line 1">
+							</div>
+                            
+                            <!-- Address Line 2 -->
+                            <div class="row">
+								<input type="text"  formControlName="addressLine2" class="form__input"  placeholder="Address Line 2">
+							</div>
+                        </div>
+                        <div class="section2">
+                            <!-- City -->
+                            <div class="row2">
+								<input type="text" formControlName="city" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" placeholder="City"/>
+                                <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                    <div *ngIf="f.city.errors.required">City is required</div>
+                                    <div *ngIf="f.city.errors.pattern">City can only have alphabets</div>
+                                </div>
+							</div>
+                            <!-- State -->
+                            <div class="row2">
+								<input type="text" formControlName="state" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.state.errors }" placeholder="State"/>
+                                <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+                                    <div *ngIf="f.state.errors.required">State is required</div>
+                                    <div *ngIf="f.state.errors.pattern">State can only have alphabets</div>
+                                </div>
+							</div>
+
+                            <!-- Country -->
+                            <div class="row2">
+								<input type="text" formControlName="country" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" placeholder="Country"/>
+                                <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                                    <div *ngIf="f.country.errors.required">Country is required</div>
+                                    <div *ngIf="f.country.errors.pattern">Country can only have alphabets</div>
+                                </div>
+							</div>
+
+                            <!-- zip code -->
+                            <div class="row2">
+								<input type="text" formControlName="zipcode" class="form__input"  placeholder="Zip Code"/>
+                            </div>
+                            
+                            <!-- Password -->
+							<div class="row2">
+
+								<input type="password" formControlName="password" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                </div>
+                                
+							</div>
+                            <!-- Confirm Password -->
+                            <div class="row2">
+
+								<input type="password" formControlName="reenterpassword" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.reenterpassword.errors }" placeholder="Re Enter Password">
+                                <div *ngIf="submitted && f.reenterpassword.errors" class="invalid-feedback">
+                                    <div *ngIf="f.reenterpassword.errors.required">Re-Enter Password is required</div>
+                                    <div *ngIf="f.reenterpassword.errors.confirmedValidator">Password and Re-Enter Password must match.</div>
+                                </div>
+                                
+							</div>
+                        </div>
+	
+                                <button [disabled]="loading" class="btn">
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Register
+                                </button>
+								<!-- <input type="submit" value="Submit" class="btn"> -->
+
+						</form>
+                        <p>Already registered?? <a href="/login">Login</a></p>
+                        
+                    <div class="row"  *ngIf="showErrorMessage">
+                        <p style="color: red;">{{errordetail}}</p>
+                    </div>
+					<!-- <div class="row">
+						<p>Already registered <a href="/login">Login</a></p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<!-- <div class="container-fluid text-center footer">
+		
+	</div> -->

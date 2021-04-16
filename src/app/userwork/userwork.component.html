@@ -1,0 +1,92 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/admindashboard']">Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/user']">User Management </button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/work']">Work Management</button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/userwork']">User Work Item Assignment</button>
+      </li>
+      <li class="nav-item active">
+        <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/messages']">Message Inbox</button>
+      </li>
+    </ul>
+
+     
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()"><h6>Logout</h6></button>
+
+  </div>
+</nav>
+
+<form [formGroup]="userworkform" (ngSubmit)="onSubmit(userworkform.value)" style="margin:108px 266px 0px 312px;">
+      <div class="form-group row">
+       <label for="user" class="col-sm-4 col-form-label">Users</label>
+       <div class="col-sm-8" >
+        
+           <select class="form-control" formControlName="user" id="user" [ngClass]="{ 'is-invalid': submitted && f.user.errors }">
+            <option value="" > Select User </option>  
+            <option *ngFor="let user of userEmail" [ngValue]="user">{{user}}</option>
+           </select>
+           <div *ngIf="submitted && f.user.errors" class="invalid-feedback">
+            <div *ngIf="f.user.errors.required">User Name is required</div>
+           </div>
+       </div>
+       
+   </div>
+  
+
+   <div class="form-group row">
+    <label for="itemcodes" class="col-sm-4 col-form-label">Work Item Codes</label>
+    <div class="col-sm-8">
+
+    <ng-multiselect-dropdown
+        name="itemcodes"
+        [placeholder]="'Select Item Codes'"
+        [data]="dropdownList"
+        formControlName="itemcodes"
+        [ngClass]="{ 'is-invalid': submitted && f.itemcodes.errors }"
+        [settings]="dropdownSettings"
+        (onSelect)="onItemSelect($event)"
+        >
+        
+    </ng-multiselect-dropdown>
+    
+    <!-- <div *ngIf="submitted && f.itemcodes.errors" 
+        class="text-danger mt-1">
+      <div *ngIf="f.itemcodes.errors.required">
+        Vendor Name is required.
+      </div>
+    </div> -->
+    <div *ngIf="submitted && f.itemcodes.errors" class="invalid-feedback">
+      <div *ngIf="f.itemcodes.errors.required">Item Code is required</div>
+     </div>
+    
+    </div>
+
+    
+   </div>
+   <button style="margin: 24px 0px 0px 358px;" type="submit" class="btn btn-primary">Create</button>
+</form>
+
+
+<!-- <form [formGroup]="myForm">
+    <ng-multiselect-dropdown
+        name="city"
+        [placeholder]="'Select City'"
+        [settings]="dropdownSettings"
+        [data]="cities"
+        formControlName="city"
+        [disabled]="disabled"
+       
+        (onSelect)="onItemSelect($event)">
+    </ng-multiselect-dropdown>
+</form> -->

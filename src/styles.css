@@ -1,0 +1,5 @@
+.bg {
+    background-image: url("../src/app/Images/bg.jpg");
+    background-size: 100% ;  
+    background-size: cover;  
+}

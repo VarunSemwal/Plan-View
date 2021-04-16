@@ -1,0 +1,53 @@
+
+
+	<!-- Main Content -->
+	<div class="container-fluid">
+		<div class="row main-content bg-success text-center">
+			<div class="col-md-4 text-center company__info">
+				<span class="company__logo"><h2><span class="fa fa-clock-o fa-lg"></span></h2></span>
+				<h4 class="company_title">Plan View</h4>
+			</div>
+			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+				<div class="container-fluid">
+					<div class="row">
+						<h2 style="margin-left: 127px;">Log In</h2>
+					</div>
+					<div class="row">
+						<form [formGroup]="loginForm" control="" class="form-group" (ngSubmit)="onSubmit(loginForm.value)">
+							<div class="row">
+								<input type="email"  formControlName="email" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Email">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="f.email.errors.required">Email Id is required</div>
+                                    <div *ngIf="f.email.errors?.pattern">Please provide a valid email domain</div>
+                                </div>
+							</div>
+							<div class="row">
+								<!-- <span class="fa fa-lock"></span> -->
+								<input type="password" formControlName="password" class="form__input" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Password is required</div>
+                                </div>
+                                
+							</div>
+
+							<div class="row">
+                                <button [disabled]="loading" class="btn">
+                                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                    Login
+                                </button>
+								<!-- <input type="submit" value="Submit" class="btn"> -->
+							</div>
+						</form>
+					</div>
+                    <div class="row" *ngIf="showErrorMessage">
+                        <p style="color: red;">{{errordetail}}</p>
+                    </div>
+					<div class="row">
+						<p>Don't have an account? <a href="/register">Register Here</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	

@@ -1,0 +1,276 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$kdrHXkAi6l7TZqv2lfqlJe7v47w9wXH7luJml5okABtbwpG3w.C7i",
+      "addressLine1": "Near Civil Court",
+      "addressLine2": "Haripur",
+      "city": "Dehradun",
+      "state": "Uttarakhand",
+      "country": "India",
+      "zipcode": "248142",
+      "role": "Admin",
+      "lockstatus": 0,
+      "retryCount": 2,
+      "id": 1
+    },
+    {
+      "email": "varun@gmai.com",
+      "password": "$2a$10$KhLXGCI.i00P/cv7VvEPFOaMIa8J1RKxvNHa3UGVFBYpBZ6hcB0ee",
+      "firstName": "varun",
+      "lastName": "semwal",
+      "addressLine1": "",
+      "addressLine2": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipcode": "",
+      "reenterpassword": "asdfgh",
+      "lockstatus": 1,
+      "id": 2
+    },
+    {
+      "email": "varukdk@gmsd.com",
+      "password": "$2a$10$ZwvCbAEDE4NitRbFwszmwu5nrs1icXOqjaSnpDGFkM2.WWNiKJMAm",
+      "firstName": "fsdfsd",
+      "lastName": "gagasdfg",
+      "addressLine1": "",
+      "addressLine2": "",
+      "city": "",
+      "state": "",
+      "country": "",
+      "zipcode": "",
+      "reenterpassword": "",
+      "lockstatus": 0,
+      "id": 3
+    },
+    {
+      "email": "vishu.sharma@qwe.com",
+      "password": "$2a$10$rfz5T3IezUPJUYsEDv9x9OXn4P9Wti/HtWkgoVzGSpupyp61YOYc2",
+      "firstName": "vishudf",
+      "lastName": "sharma",
+      "dateofbirth": {
+        "year": 2021,
+        "month": 4,
+        "day": 7
+      },
+      "addressLine1": "H.No 1144",
+      "addressLine2": "Sector 8",
+      "city": "Kurukshetraaa",
+      "state": "Haryana",
+      "country": "India",
+      "zipcode": "123456",
+      "role": "User",
+      "lockstatus": 0,
+      "retryCount": 0,
+      "id": 4
+    },
+    {
+      "email": "meera@cvm.com",
+      "password": "$2a$10$5TXhV1zW8/ppX3iKAwvR5uRaNwv6nRLIJUkJD2vMCSHZj5IamzPiO",
+      "firstName": "Meera",
+      "lastName": "Singh",
+      "dateofbirth": {
+        "year": 2021,
+        "month": 4,
+        "day": 7
+      },
+      "addressLine1": "Ainwai",
+      "addressLine2": "Ainwai",
+      "city": "Ainwai",
+      "state": "Ainwai",
+      "country": "Ainwai",
+      "zipcode": "1234",
+      "role": "User",
+      "lockstatus": 0,
+      "retryCount": 0,
+      "id": 6
+    },
+    {
+      "email": "varunsemwal@hji.com",
+      "password": "$2a$10$yVonybbrBvxIm8QQ0CDOBeUsqspJQ5AjNMhaqRkm/KxsBtL6e48H.",
+      "firstName": "Varun",
+      "lastName": "Semwal",
+      "dateofbirth": {
+        "year": 2021,
+        "month": 4,
+        "day": 10
+      },
+      "addressLine1": "Near Civil Court",
+      "addressLine2": "Haripur",
+      "city": "Dehradun",
+      "state": "Uttarakhand",
+      "country": "India",
+      "zipcode": "248142",
+      "role": "User",
+      "lockstatus": 0,
+      "retryCount": 0,
+      "id": 7
+    },
+    {
+      "email": "admin@admin.com",
+      "password": "$2a$10$wGmD4xV7A6pMuY9luVziTOKWx16K9uwPpKPfwCD8K2El3pgqLp4Sm",
+      "firstName": "admin",
+      "lastName": "admin",
+      "dateofbirth": {
+        "year": 2021,
+        "month": 4,
+        "day": 8
+      },
+      "addressLine1": "Near Civil Court",
+      "addressLine2": "Haripur",
+      "city": "Dehradun",
+      "state": "Uttarakhand",
+      "country": "India",
+      "zipcode": "248142",
+      "role": "Admin",
+      "lockstatus": 0,
+      "retryCount": 2,
+      "id": 8
+    },
+    {
+      "email": "user@user.com",
+      "password": "$2a$10$o/U8ZyUc1mDdzIFR6/o1QOUQxW3PZ33LnUmq/rKv5W6V9BuYK46jS",
+      "firstName": "User",
+      "lastName": "User",
+      "dateofbirth": {
+        "year": 2021,
+        "month": 4,
+        "day": 14
+      },
+      "addressLine1": "H.No 1144",
+      "addressLine2": "Sector 8",
+      "city": "Kurukshetra",
+      "state": "Haryana",
+      "country": "India",
+      "zipcode": "123456",
+      "role": "User",
+      "lockstatus": 0,
+      "retryCount": 0,
+      "id": 9
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin"
+    },
+    {
+      "id": 2,
+      "name": "user"
+    }
+  ],
+  "userwork": [
+    {
+      "user": "varun@gmai.com",
+      "itemcodes": [
+        {
+          "item_id": 2,
+          "item_text": "IT2"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "user": "",
+      "itemcodes": "",
+      "id": 2
+    },
+    {
+      "user": "varun@gmai.com",
+      "itemcodes": [
+        {
+          "item_id": 1,
+          "item_text": "IT1"
+        },
+        {
+          "item_id": 2,
+          "item_text": "IT2"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "user": "",
+      "itemcodes": "",
+      "id": 4
+    },
+    {
+      "user": "varun@gmai.com",
+      "itemcodes": [
+        {
+          "item_id": 1,
+          "item_text": "IT1"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "worktype": [
+    {
+      "id": 1,
+      "WorkTypeCode": "WT1",
+      "Description": "Work Type 1"
+    },
+    {
+      "id": 2,
+      "WorkTypeCode": "WT2",
+      "Description": "Work Type 2"
+    },
+    {
+      "WorkTypeCode": "PV1234",
+      "Description": "New Work",
+      "id": 3
+    },
+    {
+      "WorkTypeCode": "MT1",
+      "Description": "safsdf",
+      "id": 4
+    },
+    {
+      "WorkTypeCode": "MT1",
+      "Description": "sdfgsdgfvsd",
+      "id": 5
+    },
+    {
+      "WorkTypeCode": "MT1",
+      "Description": "sdfgsdgfvsd",
+      "id": 6
+    },
+    {
+      "WorkTypeCode": "ADM124",
+      "Description": "sdfgsdgfvsd",
+      "id": 7
+    },
+    {
+      "WorkTypeCode": "MT4",
+      "Description": "dfjkhsdjk",
+      "id": 8
+    },
+    {
+      "WorkTypeCode": "VARUN",
+      "Description": "Varun",
+      "id": 9
+    }
+  ],
+  "workitem": [
+    {
+      "id": 1,
+      "WorkItemCode": "IT1",
+      "Description": "Item 1 ",
+      "WorkTypeCode": "WT1"
+    },
+    {
+      "id": 2,
+      "WorkItemCode": "IT2",
+      "Description": "Item 2",
+      "WorkTypeCode": "WT2"
+    },
+    {
+      "WorkTypeCode": "WT2",
+      "Description": "efgfdgd",
+      "WorkItemCode": "KKKKLLLA",
+      "id": 4
+    }
+  ]
+}

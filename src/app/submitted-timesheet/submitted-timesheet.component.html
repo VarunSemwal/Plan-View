@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/admindashboard']">Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/user']">User Management </button>
+        </li>
+        <li class="nav-item active">
+          <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/work']">Work Management</button>
+        </li>
+        <li class="nav-item active">
+          <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/userwork']">User Work Item Assignment</button>
+        </li>
+        <li class="nav-item active">
+          <button style="margin: 10px 11px 13px 3px;" class="nav-link" [routerLink]="['/messages']">Message Inbox</button>
+        </li>
+      </ul>
+  
+       
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()"><h6>Logout</h6></button>
+  
+    </div>
+  </nav>
+
+  <div class="content" role="main">
+    <div class="card-container">
+        <a class="card"  rel="noopener">
+            <ul>
+            <li><h5>This Feature is Under Development.</h5></li>
+            <li><h5>Please Contact Developer.</h5></li>
+        </ul>
+
+        </a>
+    </div>
+  </div>
