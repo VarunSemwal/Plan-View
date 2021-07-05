@@ -24,6 +24,7 @@ const routes: Routes = [
 {path:'timesheet',       component:SubmittedTimesheetComponent,canActivate: [RouteguardService]},
 {path:'userdashboard',       component:UserDashboardComponent},
 { path: '', redirectTo: "/login", pathMatch: 'full' },
+{path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
 
 ];
 

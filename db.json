@@ -66,29 +66,8 @@
       "id": 4
     },
     {
-      "email": "meera@cvm.com",
-      "password": "$2a$10$5TXhV1zW8/ppX3iKAwvR5uRaNwv6nRLIJUkJD2vMCSHZj5IamzPiO",
-      "firstName": "Meera",
-      "lastName": "Singh",
-      "dateofbirth": {
-        "year": 2021,
-        "month": 4,
-        "day": 7
-      },
-      "addressLine1": "Ainwai",
-      "addressLine2": "Ainwai",
-      "city": "Ainwai",
-      "state": "Ainwai",
-      "country": "Ainwai",
-      "zipcode": "1234",
-      "role": "User",
-      "lockstatus": 0,
-      "retryCount": 0,
-      "id": 6
-    },
-    {
       "email": "varunsemwal@hji.com",
-      "password": "$2a$10$yVonybbrBvxIm8QQ0CDOBeUsqspJQ5AjNMhaqRkm/KxsBtL6e48H.",
+      "password": "$2a$10$08qFYFxVLn.SGDxgsJ2wxejpQxeHzDuNRynGhgYf4jS1AS/GokLzG",
       "firstName": "Varun",
       "lastName": "Semwal",
       "dateofbirth": {
@@ -125,7 +104,7 @@
       "zipcode": "248142",
       "role": "Admin",
       "lockstatus": 0,
-      "retryCount": 2,
+      "retryCount": 0,
       "id": 8
     },
     {
@@ -158,6 +137,16 @@
     {
       "id": 2,
       "name": "user"
+    },
+    {
+      "Id": 0,
+      "Name": "Varun Role",
+      "id": 3
+    },
+    {
+      "Id": 0,
+      "Name": "Varun Role",
+      "id": 4
     }
   ],
   "userwork": [
@@ -204,13 +193,39 @@
         }
       ],
       "id": 5
+    },
+    {
+      "user": "olivier@mail.com",
+      "itemcodes": [
+        {
+          "item_id": 1,
+          "item_text": "IT1"
+        },
+        {
+          "item_id": 4,
+          "item_text": "KKKKLLLA"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "user": "varun@gmai.com",
+      "itemcodes": [
+        {
+          "item_id": 2,
+          "item_text": "IT2"
+        },
+        {
+          "item_id": 1,
+          "item_text": "IT1"
+        }
+      ],
+      "id": 7
     }
   ],
   "worktype": [
     {
-      "id": 1,
-      "WorkTypeCode": "WT1",
-      "Description": "Work Type 1"
+      "id": 1
     },
     {
       "id": 2,
@@ -251,6 +266,20 @@
       "WorkTypeCode": "VARUN",
       "Description": "Varun",
       "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "WorkTypeCode": "1231234",
+      "Description": "asdgdfahd",
+      "id": 13
     }
   ],
   "workitem": [
@@ -271,6 +300,12 @@
       "Description": "efgfdgd",
       "WorkItemCode": "KKKKLLLA",
       "id": 4
+    },
+    {
+      "WorkItemCode": "AGHUF",
+      "Description": "Test Item ",
+      "WorkTypeCode": "MT1",
+      "id": 5
     }
   ]
 }

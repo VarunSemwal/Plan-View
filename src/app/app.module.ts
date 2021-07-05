@@ -17,6 +17,7 @@ import { MessagesComponent } from './messages/messages.component';
 import {DOBPipe} from './validators/dobpipe';
 import { SubmittedTimesheetComponent } from './submitted-timesheet/submitted-timesheet.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { LazyModule } from './lazy/lazy.module';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
     HttpClientModule,
     NgbModule,
     CommonModule,
+    LazyModule,
     NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
